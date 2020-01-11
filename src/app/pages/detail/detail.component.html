@@ -1,0 +1,27 @@
+<app-header></app-header>
+<section class="container">
+   <h2>{{ contact.name }}</h2>
+   
+   
+   <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Nome" name="nome" [(ngModel)]="contact.name">
+      </mat-form-field>
+      
+      <mat-form-field class="example-full-width">
+         <input matInput placeholder="E-mail" name="email" type="email" [(ngModel)]="contact.email">
+       </mat-form-field>
+
+       <mat-form-field class="example-full-width">
+         <input matInput placeholder="Telefone" name="phoneNumber" type="number" [(ngModel)]="contact.phoneNumber">
+       </mat-form-field>
+    </form>
+    <button mat-flat-button color="primary" (click)="save()" aria-label="Salvar">
+       Salvar
+   </button>
+   <button mat-flat-button color="primary" routerLink="/" aria-label="Voltar">
+      <mat-icon>keyboard_arrow_left</mat-icon> Voltar
+   </button>
+</section>
+
+
